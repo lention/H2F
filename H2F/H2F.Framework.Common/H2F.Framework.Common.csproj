@@ -44,14 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DEncrypt.cs" />
+    <Compile Include="Extension\AttributeExtension.cs" />
+    <Compile Include="Extension\ExceptionExtension.cs" />
     <Compile Include="Extension\JsonExtension.cs" />
     <Compile Include="Extension\ObjectExtension.cs" />
     <Compile Include="Extension\StringExtention.cs" />
+    <Compile Include="Helper\AESHepler.cs" />
+    <Compile Include="Helper\ExceptionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helper\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

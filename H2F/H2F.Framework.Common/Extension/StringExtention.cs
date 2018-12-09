@@ -1,4 +1,5 @@
-﻿using System;
+﻿using H2F.Framework.Common.Helper;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -98,6 +99,22 @@ namespace H2F.Framework.Common.Extension
                    System.Configuration.ConfigurationManager.AppSettings["IsEncryptConnectionString"],
                    str
                   );
+        }
+        public static string ConvertConnectionString(this string conStr, string isEncrypted = "false")
+        {
+            bool needDecrypt = false;
+            bool.TryParse(isEncrypted, out needDecrypt);
+            System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"^data\s+source");
+            if (needDecrypt && !regex.Match(conStr.ToLower().Trim()).Success)
+            {
+                if (conStr.ToLower().StartsWith("*noencrypt*_"))
+                {
+                    return conStr.Remove(0, "*noencrypt*_".Length);
+                }
+                return AESHepler.AESDecrypt(conStr);
+            }
+            //如果是没有定义为使用了加密串，或者定义使用了加密串，但实际上并没有加密则原样返回
+            return conStr;
         }
     }
 }
