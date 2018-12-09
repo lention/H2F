@@ -184,9 +184,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\H2F\\H2F\\H2F.Common\\H2F.Common.csproj",
-      "projectName": "H2F.Common",
-      "projectPath": "D:\\Projects\\H2F\\H2F\\H2F.Common\\H2F.Common.csproj",
+      "projectUniqueName": "D:\\Projects\\H2F\\H2F\\H2F.Common\\H2F.Standard .Common.csproj",
+      "projectName": "H2F.Standard .Common",
+      "projectPath": "D:\\Projects\\H2F\\H2F\\H2F.Common\\H2F.Standard .Common.csproj",
       "packagesPath": "C:\\Users\\HeJiao\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\H2F\\H2F\\H2F.Common\\obj\\",
       "projectStyle": "PackageReference",
