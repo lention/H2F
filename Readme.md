@@ -22,7 +22,7 @@
 > 数据库操作（mysql, sqlserver)
 > dapper
 > 日志（log4net,nlog,custom)
-> 缓存方面（memory, redis)
+> 缓存方面（memory, redis) 
 
 
 
