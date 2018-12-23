@@ -15,53 +15,7 @@ namespace H2F.Framework.Common.Extension
     /// 创建时间： 2018-12-9 11:48
     /// </summary>
     public static class StringExtention
-    {
-        public static bool IsNullOrEmpty(this string str)
-        {
-            return string.IsNullOrEmpty(str);
-        }
-
-        public static bool IsNullOrWhiteSpace(this string str)
-        {
-            return string.IsNullOrWhiteSpace(str);
-        }
-
-        public static string Format(this string str, params object[] obj)
-        {
-            return string.Format(str, obj);
-        }
-
-        public static string Sub(this string str, int length)
-        {
-            if (str.IsNullOrEmpty())
-            {
-                return null;
-            }
-            else
-            {
-                return (str.Length > length) ? str.Substring(0, length) : str;
-            }
-        }
-
-        public static string TryReplace(this string str, string oldStr, string newStr)
-        {
-            return str.IsNullOrEmpty() ? str : str.Replace(oldStr, newStr);
-        }
-
-        public static string RegexReplace(this string str, string pattern, string replacement)
-        {
-            return str.IsNullOrEmpty() ? str : Regex.Replace(str, pattern, replacement);
-        }
-
-        public static string ValueOfConnectionString(this string connectionName)
-        {
-            return ConfigurationManager.ConnectionStrings[connectionName].IsNull() ? null : ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
-        }
-
-        public static string ValueOfAppSetting(this string appSetingKey)
-        {
-            return ConfigurationManager.AppSettings[appSetingKey];
-        }
+    { 
 
         /// <summary>
         /// 解密connectionsetting里加密的字符串(根据配置IsEncryptConnectionString决定是否解密）

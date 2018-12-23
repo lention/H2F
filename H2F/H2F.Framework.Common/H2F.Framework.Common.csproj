@@ -47,14 +47,18 @@
     <Compile Include="DEncrypt.cs" />
     <Compile Include="Extension\AttributeExtension.cs" />
     <Compile Include="Extension\ExceptionExtension.cs" />
-    <Compile Include="Extension\JsonExtension.cs" />
     <Compile Include="Extension\ObjectExtension.cs" />
     <Compile Include="Extension\StringExtention.cs" />
     <Compile Include="Helper\AESHepler.cs" />
     <Compile Include="Helper\ExceptionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\H2F.Common\H2F.Standard .Common.csproj">
+      <Project>{25b89e48-0398-4105-855e-48051c93c175}</Project>
+      <Name>H2F.Standard .Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

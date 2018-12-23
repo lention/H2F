@@ -4,7 +4,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+//
+using H2F.Standard.Common.Extensions;
 namespace H2F.Framework.Common.Extension
 {
     /// <summary>
