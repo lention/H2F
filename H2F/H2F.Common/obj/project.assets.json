@@ -2,6 +2,32 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Autofac/4.8.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Mvc5/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "[4.0.1, 5.0.0)",
+          "Microsoft.AspNet.Mvc": "[5.1.0, 6.0.0)"
+        },
+        "compile": {
+          "lib/net45/Autofac.Integration.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Autofac.Integration.Mvc.dll": {}
+        }
+      },
       "Castle.Core/4.3.1": {
         "type": "package",
         "dependencies": {
@@ -32,6 +58,47 @@
           "lib/netstandard2.0/JetBrains.Annotations.dll": {}
         }
       },
+      "Microsoft.AspNet.Mvc/5.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "[3.1.0, 3.2.0)",
+          "Microsoft.AspNet.WebPages": "[3.1.0, 3.2.0)"
+        },
+        "compile": {
+          "lib/net45/System.Web.Mvc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "[3.1.0, 3.2.0)",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/System.Web.Helpers.dll": {},
+          "lib/net45/System.Web.WebPages.Deployment.dll": {},
+          "lib/net45/System.Web.WebPages.Razor.dll": {},
+          "lib/net45/System.Web.WebPages.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {},
+          "lib/net45/System.Web.WebPages.Deployment.dll": {},
+          "lib/net45/System.Web.WebPages.Razor.dll": {},
+          "lib/net45/System.Web.WebPages.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -48,6 +115,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -665,6 +741,32 @@
     }
   },
   "libraries": {
+    "Autofac/4.8.1": {
+      "sha512": "GYRLxd2wCzhvee2u1vs3AbUbF4CHDWfD7BCNjD3Vxb4wxQz3HC8bPm9Sj9uOT0gE8a6PC2fx1zufmhLgxK+cZg==",
+      "type": "package",
+      "path": "autofac/4.8.1",
+      "files": [
+        ".signature.p7s",
+        "autofac.4.8.1.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Mvc5/4.0.2": {
+      "sha512": "8cA5Qq0bBpLUrWqeksF/54ehXUFuA+zI+cGc055/Fc1jc063UbJX8SG2hMWQKoNjlZUlPApx1wpnOWfzYQvcYA==",
+      "type": "package",
+      "path": "autofac.mvc5/4.0.2",
+      "files": [
+        ".signature.p7s",
+        "autofac.mvc5.4.0.2.nupkg.sha512",
+        "autofac.mvc5.nuspec",
+        "lib/net45/Autofac.Integration.Mvc.dll",
+        "lib/net45/Autofac.Integration.Mvc.xml"
+      ]
+    },
     "Castle.Core/4.3.1": {
       "sha512": "Dx90A7xzdyYiaq1aMn3QmblpFAaVhDCiZkSblt96pf8QopOjLxCcs5ufKJA1zyg2L+Hxjnzx3JNrmfK8ZMRHvA==",
       "type": "package",
@@ -709,6 +811,52 @@
         "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
       ]
     },
+    "Microsoft.AspNet.Mvc/5.1.0": {
+      "sha512": "ap0ilXlCD1N6AgPoWyx1ly/pZ1Umyoa2skqM2X9Zn/wfvswasxwuYhavulta6pe39EbattHj2ICV8+MPQu4wKA==",
+      "type": "package",
+      "path": "microsoft.aspnet.mvc/5.1.0",
+      "files": [
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "lib/net45/System.Web.Mvc.dll",
+        "lib/net45/System.Web.Mvc.xml",
+        "microsoft.aspnet.mvc.5.1.0.nupkg.sha512",
+        "microsoft.aspnet.mvc.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Razor/3.1.0": {
+      "sha512": "lIS7Zmz5U18cRJKUkFnnKFbR5oAaU0ODUKnQrM2pKyrWfdtNYJuP2FY160qwwN1EiDOVDx2vq5fmkOzLZp115g==",
+      "type": "package",
+      "path": "microsoft.aspnet.razor/3.1.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net45/System.Web.Razor.dll",
+        "lib/net45/System.Web.Razor.xml",
+        "microsoft.aspnet.razor.3.1.0.nupkg.sha512",
+        "microsoft.aspnet.razor.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebPages/3.1.0": {
+      "sha512": "Rr2qakdtAreEIlSajLK1svYsW/huA/d+bXQSO+1tlA97pvLKCZg5gVno5K+yZbTGRgnlWATjUK9OWxiQEssoBg==",
+      "type": "package",
+      "path": "microsoft.aspnet.webpages/3.1.0",
+      "files": [
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "lib/net45/System.Web.Helpers.dll",
+        "lib/net45/System.Web.Helpers.xml",
+        "lib/net45/System.Web.WebPages.Deployment.dll",
+        "lib/net45/System.Web.WebPages.Deployment.xml",
+        "lib/net45/System.Web.WebPages.Razor.dll",
+        "lib/net45/System.Web.WebPages.Razor.xml",
+        "lib/net45/System.Web.WebPages.dll",
+        "lib/net45/System.Web.WebPages.xml",
+        "microsoft.aspnet.webpages.3.1.0.nupkg.sha512",
+        "microsoft.aspnet.webpages.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -735,6 +883,16 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "type": "package",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "files": [
+        "lib/net40/Microsoft.Web.Infrastructure.dll",
+        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+        "microsoft.web.infrastructure.nuspec"
       ]
     },
     "NETStandard.Library/2.0.3": {
@@ -3075,6 +3233,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Autofac >= 4.8.1",
+      "Autofac.Mvc5 >= 4.0.2",
       "Castle.Core >= 4.3.1",
       "JetBrains.Annotations >= 2018.2.1",
       "NETStandard.Library >= 2.0.3",
@@ -3122,6 +3282,14 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Autofac": {
+            "target": "Package",
+            "version": "[4.8.1, )"
+          },
+          "Autofac.Mvc5": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
           "Castle.Core": {
             "target": "Package",
             "version": "[4.3.1, )"
@@ -3148,5 +3316,57 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Autofac.Mvc5 4.0.2”。此包可能与项目不完全兼容。",
+      "libraryId": "Autofac.Mvc5",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Microsoft.AspNet.Mvc 5.1.0”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Microsoft.AspNet.Razor 3.1.0”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Microsoft.AspNet.WebPages 3.1.0”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Microsoft.Web.Infrastructure 1.0.0”。此包可能与项目不完全兼容。",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }
