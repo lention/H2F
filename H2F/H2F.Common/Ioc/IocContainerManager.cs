@@ -6,6 +6,7 @@ using System.Text;
 //
 using Autofac;
 using Autofac.Core.Lifetime;
+using Autofac.Features.Indexed;
 using Autofac.Integration.Mvc;
 using H2F.Standard.Common.Extensions;
 namespace H2F.Standard .Common.Ioc
@@ -101,6 +102,12 @@ namespace H2F.Standard .Common.Ioc
         {
             scope=scope.InitScope();
             return scope.ResolveOptional(serviceType);
+        }
+
+        public static TValue ResolveByEnumKey<TKey, TValue>(TKey key)
+        {
+            IIndex<TKey, TValue> idex = _container.Resolve<IIndex<TKey, TValue>>();
+            return idex[key];
         }
 
         public static ILifetimeScope DefaultScope(bool isHttpContext=true)

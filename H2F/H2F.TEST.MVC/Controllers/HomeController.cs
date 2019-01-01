@@ -20,22 +20,28 @@ namespace H2F.TEST.MVC.Controllers
         {
             person = p;
         }
+
+      
         public ActionResult Index()
         {
-           var na=  IocContainerManager.Resolve<IPerson>().GetNames();
+            var na = IocContainerManager.Resolve<IPerson>().GetNames();
             Response.Write(na);
             Response.Write(person.GetNames());
 
+           var ss =  IocContainerManager.ResolveByEnumKey<PersonType, IPerson>(PersonType.Worker);
+
+            Response.Write("/r/n ss=" + ss.GetNames() +"/r/n");
             IIndex<PersonType, IPerson> IIndex = IocContainerManager.Container.Resolve<IIndex<PersonType, IPerson>>();
             IPerson p = IIndex[PersonType.Worker];
 
             Response.Write(p.GetNames());
 
             string str = "";
-            var t = Task.Factory.StartNew(() => {
+            var t = Task.Factory.StartNew(() =>
+            {
                 str = IocContainerManager.Resolve<IPerson>().GetNames();
             });
-          //  t.Start();
+            //  t.Start();
             t.Wait();
 
             //Task.WaitAll();
