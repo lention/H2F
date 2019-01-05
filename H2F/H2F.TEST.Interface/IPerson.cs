@@ -2,7 +2,7 @@
 
 namespace H2F.TEST.Interface
 {
-    public interface IPerson:IBase
+    public interface IPerson:IH2FBase
     {
         string GetNames();
     }

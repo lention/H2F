@@ -4,7 +4,7 @@ using System.Text;
 
 namespace H2F.TEST.Interface
 {
-    public interface IBase
+    public interface IH2FBase
     {
     }
 }

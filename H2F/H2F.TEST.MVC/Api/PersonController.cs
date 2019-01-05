@@ -8,6 +8,7 @@ using System.Web.Http;
 using H2F.TEST.Interface;
 using H2F.Standard.Common.Ioc;
 using H2F.TEST.MVC.Common;
+using H2F.TEST.Bussiness;
 
 namespace H2F.TEST.MVC.Api
 {
@@ -22,6 +23,8 @@ namespace H2F.TEST.MVC.Api
         // GET api/<controller>
         public string Get()
         {
+            Person p = new Person(IocContainerManager.Resolve<IPerson>());
+
             return person.GetNames();
         }
 

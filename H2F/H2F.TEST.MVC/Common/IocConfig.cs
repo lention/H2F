@@ -20,9 +20,15 @@ namespace H2F.TEST.MVC.Common
             var iocBuilder = new Autofac.ContainerBuilder();
             iocBuilder.RegisterControllers(Assembly.GetExecutingAssembly());
             iocBuilder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+            //Type baseType = typeof(IH2FBase);
+            var iInterfaces = Assembly.Load("H2F.TEST.Interface");
+            var implement = Assembly.Load("H2F.TEST.Implement");
+            iocBuilder.RegisterAssemblyTypes(iInterfaces, implement).AsImplementedInterfaces();
+
             iocBuilder.RegisterType<Student>().As<IPerson>();
-            iocBuilder.RegisterType<Student>().Keyed<IPerson>(PersonType.Student);
             iocBuilder.RegisterType<Worker>().Keyed<IPerson>(PersonType.Worker);
+
+            iocBuilder.RegisterType<Student>().Keyed<IPerson>(PersonType.Student);
             var config = GlobalConfiguration.Configuration;
             iocBuilder.RegisterWebApiFilterProvider(config);
             IContainer iocContainer = iocBuilder.Build();
