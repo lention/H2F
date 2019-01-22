@@ -10,6 +10,7 @@ using H2F.TEST.Interface;
 using H2F.TEST.Implement;
 using System.Web.Http;
 using H2F.Standard.Common.Ioc;
+using H2F.Standard.Common.Log;
 
 namespace H2F.TEST.MVC.Common
 {
@@ -29,6 +30,9 @@ namespace H2F.TEST.MVC.Common
             iocBuilder.RegisterType<Worker>().Keyed<IPerson>(PersonType.Worker);
 
             iocBuilder.RegisterType<Student>().Keyed<IPerson>(PersonType.Student);
+
+
+            iocBuilder.RegisterType<Log4net>().As<ILogger>();
             var config = GlobalConfiguration.Configuration;
             iocBuilder.RegisterWebApiFilterProvider(config);
             IContainer iocContainer = iocBuilder.Build();

@@ -9,21 +9,25 @@ using Autofac.Features.Indexed;
 using H2F.TEST.MVC.Common;
 using Autofac;
 using System.Threading.Tasks;
+using H2F.Standard.Common.Log;
 
 namespace H2F.TEST.MVC.Controllers
 {
     public class HomeController : Controller
     {
         public IPerson person;
+        public ILogger logger;
 
-        public HomeController(IPerson p)
+        public HomeController(IPerson p, ILogger logger)
         {
             person = p;
+            this.logger = logger;
         }
 
       
         public ActionResult Index()
         {
+            logger.Info("into index page");
             var na = IocContainerManager.Resolve<IPerson>().GetNames();
             Response.Write(na);
             Response.Write(person.GetNames());
